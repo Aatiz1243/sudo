@@ -1,20 +1,18 @@
 {
-  "name": "sudo-bot",
-  "version": "1.0.0",
-  "description": "",
+  "name": "sudo-discord-app",
+  "version": "1.0.1",
+  "description": "Sudo — playful sudo command emulator for Discord",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Aatiz",
+  "license": "MIT",
   "dependencies": {
-    "axios": "^1.12.2",
-    "discord.js": "^14.22.1",
-    "dotenv": "^17.2.3"
+    "discord.js": "^14.23.2",
+    "dotenv": "^16.6.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"

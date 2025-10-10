@@ -7,9 +7,10 @@
 //
 // By default this script runs in DRY_RUN mode (safe): set DRY_RUN=false in .env to actually delete.
 
-const { REST } = require('@discordjs/rest');
-const { Routes } = require('discord-api-types/v10');
-require('dotenv').config();
+import { REST } from '@discordjs/rest';
+import { Routes } from 'discord-api-types/v10';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const token = process.env.BOT_TOKEN;
 const clientId = process.env.CLIENT_ID;
@@ -27,14 +28,9 @@ const rest = new REST({ version: '10' }).setToken(token);
 // - possible literal command names (with underscores/hyphens variants)
 // - subcommands named "on","off","disable","enable","list"
 const rawTargets = [
-  'firewall on',
-  'firewall off',
-  'toggle disable',
-  'toggle enable',
-  'toggle list'
+  'help' // Added to target /help command
 ];
 
-const unwantedSubcommands = new Set(['on', 'off', 'disable', 'enable', 'list']);
 const unwantedParentNames = new Set(['firewall', 'toggle']);
 
 // build literal name variants (spaces → underscore / dash)
