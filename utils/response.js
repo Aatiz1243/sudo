@@ -24,6 +24,42 @@ function pickIndexNoImmediateRepeat(arrLength, lastIndex) {
 export function getResponse(commandText, repeatCount, user, lastIndex = null) {
   const username = user?.username ?? 'there';
 
+  // Per-command response pools
+  const commandResponses = {
+    sudo: {
+      first: [
+        `What do you want?`,
+        `Hey ${username}, what do you want?`,
+        `Yes, what do you want?`,
+        `Yeah. What do you want, chap?`,
+        `What's the matter? What u want?`
+      ],
+      second: [
+        `You already asked. What do you want?`,
+        `Still waiting, ${username}.`,
+        `Yes, yes, what do you want?`,
+        `Repeating won't help, chap.`,
+        `Again? What do you want?`
+      ],
+      third: [
+        `WHY ARE YOU SPAMMING ME?`,
+        `Stop spamming, ${username}.`,
+        `Seriously, what do you want?`,
+        `Enough! What do you want?`,
+        `I'm not a genie, ${username}.`
+      ],
+      more: [
+        `I'm ignoring you now.`,
+        `Spam detected.`,
+        `No more responses for you.`,
+        `...`,
+        `Please stop.`
+      ]
+    }
+    // Add more commands here as needed
+  };
+
+  // Default generic responses
   const firstTimeResponses = [
     `🛠 Executing "${commandText}"... Success! ${username}, you now have admin privileges over reality.`,
     `💥 "${commandText}" failed — permission denied. You’re not root (yet), ${username}.`,
@@ -53,10 +89,28 @@ export function getResponse(commandText, repeatCount, user, lastIndex = null) {
     `this is getting repetitive. use words.`
   ];
 
+  const moreResponses = [
+    `WHY ARE YOU SPAMMING ME?`,
+    `Stop spamming, ${username}.`,
+    `No more responses for you.`,
+    `...`,
+    `Please stop.`
+  ];
+
+  // Determine which pool to use
   let pool;
-  if (repeatCount === 1) pool = firstTimeResponses;
-  else if (repeatCount === 2) pool = secondTimeResponses;
-  else pool = thirdTimeResponses;
+  const cmdKey = commandText.trim().toLowerCase();
+  if (commandResponses[cmdKey]) {
+    if (repeatCount === 1) pool = commandResponses[cmdKey].first;
+    else if (repeatCount === 2) pool = commandResponses[cmdKey].second;
+    else if (repeatCount === 3) pool = commandResponses[cmdKey].third;
+    else pool = commandResponses[cmdKey].more;
+  } else {
+    if (repeatCount === 1) pool = firstTimeResponses;
+    else if (repeatCount === 2) pool = secondTimeResponses;
+    else if (repeatCount === 3) pool = thirdTimeResponses;
+    else pool = moreResponses;
+  }
 
   const idx = pickIndexNoImmediateRepeat(pool.length, typeof lastIndex === 'number' ? lastIndex : -1);
   const text = idx >= 0 ? pool[idx] : pool[0] ?? '';
