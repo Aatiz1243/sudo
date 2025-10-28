@@ -2,6 +2,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
+import { createResponse } from '../utils/response.js';
 
 const __filename = fileURLToFilePath(import.meta.url);
 function fileURLToFilePath(url) {
@@ -65,18 +66,18 @@ export async function initTextCommands(client, options = {}) {
       if (!entry.isFile()) continue;
       if (!entry.name.endsWith('.js')) continue;
 
-      try {
-        // dynamic import
-        const moduleUrl = pathToFileURL(full).href;
-        const mod = await import(moduleUrl);
-        const cmd = (mod.default ?? mod);
+        try {
+          // dynamic import
+          const moduleUrl = pathToFileURL(full).href;
+          const mod = await import(moduleUrl);
+          const cmd = (mod.default ?? mod);
 
-        if (!cmd || typeof cmd.name !== 'string') {
-          console.warn(`[commands] skipping invalid module (missing name): ${full}`);
-          continue;
-        }
+          console.log('[commands] Attempting to load:', full, 'module:', cmd);
 
-        // Attach responses from .txt (same name) if available
+          if (!cmd || typeof cmd.name !== 'string') {
+            console.warn(`[commands] skipping invalid module (missing name): ${full}`);
+            continue;
+          }        // Attach responses from .txt (same name) if available
         const base = entry.name.slice(0, -3); // remove .js
         const txtPath = path.join(dir, `${base}.txt`);
         try {

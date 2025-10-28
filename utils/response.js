@@ -21,6 +21,17 @@ function pickIndexNoImmediateRepeat(arrLength, lastIndex) {
   return (lastIndex + 1) % arrLength;
 }
 
+export function createResponse({ title, description, color = '#0099ff', footer = null }) {
+  return {
+    embeds: [{
+      title,
+      description,
+      color,
+      footer: footer ? { text: footer } : null
+    }]
+  };
+}
+
 export function getResponse(commandText, repeatCount, user, lastIndex = null) {
   const username = user?.username ?? 'there';
 

@@ -26,12 +26,12 @@ export function startStatusRotation(client, options = {}) {
 
   // Normalize to array of { text, type }
   const pool = activities.map(a => {
-    if (typeof a === 'string') return { text: a, type: ActivityType.Playing };
+    if (typeof a === 'string') return { text: a, type: ActivityType.Custom };
     if (typeof a === 'object' && a !== null) {
-      const t = (a.type && typeof a.type === 'string') ? ActivityType[a.type] ?? ActivityType.Playing : ActivityType.Playing;
+      const t = (a.type && typeof a.type === 'string') ? ActivityType[a.type] ?? ActivityType.Custom : ActivityType.Custom;
       return { text: a.text || '', type: t };
     }
-    return { text: String(a), type: ActivityType.Playing };
+    return { text: String(a), type: ActivityType.Custom };
   });
 
   function pickIndex(lastIndex) {
