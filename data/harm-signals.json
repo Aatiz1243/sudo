@@ -1,0 +1,15 @@
+{
+  "patterns": [
+    "killmyself",
+    "wanttodie",
+    "wanttokillmyself",
+    "endmylife",
+    "suicidal",
+    "selfharm",
+    "hurtingmyself",
+    "cutmyself",
+    "cuttingmyself"
+  ],
+  "dmMessage": "Hey — I can't run that command, but I noticed what you typed.\n\nIf you're going through something right now, please reach out to someone who can actually help:\n\n**988 Suicide & Crisis Lifeline:** Call or text **988** (US)\n**Crisis Text Line:** Text HOME to **741741**\n**International resources:** https://findahelpline.com\n\nYou don't have to deal with it alone.",
+  "hatePatterns": []
+}

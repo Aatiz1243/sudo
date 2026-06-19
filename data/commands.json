@@ -1,0 +1,244 @@
+{
+  "commands": {
+    "sleep": {
+      "aliases": ["getsomesleep", "letmesleep", "needsleep", "cansleep", "getsleep", "fallasleep", "cantfallasleep", "insomniac", "cantsleep"],
+      "responses": [
+        "Executing sleep... Error: too many thoughts running in background processes.",
+        "sleep.sh: blocked by phone, existential dread, and one more episode.",
+        "Permission denied. Your brain doesn't have sudo access to itself.",
+        "Warning: sleep may cause missed alarms, abandoned to-do lists, and 3 AM regret.",
+        "sudo: sleep: 3 hours of scrolling required before system shutdown."
+      ]
+    },
+    "homework": {
+      "aliases": ["domyhomework", "finishhomework", "dohomework", "myhomework", "assignments", "doassignment", "doassignments", "finishassignment"],
+      "responses": [
+        "Homework detected. Initiating procrastination protocol instead.",
+        "Error 404: motivation not found. Panic at 2 AM rescheduled automatically.",
+        "Homework queued for tomorrow. And the day after. Until it's due in 20 minutes.",
+        "Done! Just kidding. Enjoy the existential crisis of starting at 11:59 PM.",
+        "sudo: homework: operation requires root access to your work ethic."
+      ]
+    },
+    "motivation": {
+      "aliases": ["getmotivated", "needmotivation", "bemotivated", "findmotivation", "getmotion", "needmotivated"],
+      "responses": [
+        "Generating motivation... process killed. Restarting in 7-10 business days.",
+        "Motivation.exe crashed. Have you tried watching a 4-hour productivity video instead of doing the thing?",
+        "Loading motivation... 3%... 3%... 3%... connection lost.",
+        "Motivation package installed. Running it is a separate step. Good luck.",
+        "sudo motivation: command not found. Alternatives: YouTube, Twitter, ceiling staring."
+      ]
+    },
+    "rich": {
+      "aliases": ["getrich", "makemoney", "berich", "needmoney", "nobroke", "getmoneynow", "makemoneyfast"],
+      "responses": [
+        "Transfer: $10,000,000 to your account... failed. Insufficient vibes.",
+        "sudo getrich: access denied. Try again after winning the genetic lottery.",
+        "Wealth protocol initiated. ETA: one app idea, six years, two pivots, probably nothing.",
+        "Error: you need money to make money. Logic.exe has stopped responding.",
+        "Rich unlocked. Requires: an idea, execution, and luck. In that order. You only have the idea."
+      ]
+    },
+    "girlfriend": {
+      "aliases": ["ineedagirlfriend", "getgirlfriend", "needgirlfriend", "wantagirlfriend", "boyfriend", "needboyfriend", "ineedaboyfriend", "getboyfriend", "findlove", "getlove", "needlove", "gf", "needgf", "getgf", "ineedagf", "ineedabf", "ineedbf", "needagf", "needabf", "wantgf", "wantbf", "wantagf", "wantabf", "iwantagirlfriend", "iwantaboyfriend", "ineedagirl", "ineedaboy"],
+      "responses": [
+        "girlfriend.sh: skill check failed. Please upgrade social stats and retry.",
+        "Found: your pillow, 14 unfinished shows, and a loyalty that's honestly touching.",
+        "Error: no romantic.dll found. Have you considered talking to a human being?",
+        "Processing... rejected by 0 people because you asked a bot instead of talking to your crush.",
+        "sudo ineedagirlfriend: that's a command you typed as one word. The diagnosis is in the syntax."
+      ]
+    },
+    "followers": {
+      "aliases": ["getfollowers", "morefollowers", "getmorefollowers", "gainfollowers", "socialmediafamous", "blowup", "gofamous", "getmillionsubscribers"],
+      "responses": [
+        "Followers generated: +3 bots, +1 your mom's alt account.",
+        "Follower acquisition initiated. Warning: you may need to be interesting first.",
+        "followers.sh: adding 1 by posting something embarrassing that goes viral. You're welcome.",
+        "Error: algorithm thwarted. You haven't posted anything cringe-worthy enough.",
+        "Have you tried having a terrible opinion? Numbers go up fast."
+      ]
+    },
+    "diet": {
+      "aliases": ["loseweight", "getfit", "needtodiet", "eatless", "eatbetter", "dietplan", "weightloss", "losefat", "eatclean", "gethealth"],
+      "responses": [
+        "diet.sh started. Cancelled at first smell of food.",
+        "Calorie deficit enabled. Overridden 40 minutes later by 'just this once.'",
+        "Body recomposition initiated. Progress report: ate two granola bars and called it clean eating.",
+        "sudo loseweight: achievable. First disable: late night snacks, delivery apps, and boredom eating.",
+        "Error: you Googled 'how to lose weight fast' instead of sleeping. This cycle is known."
+      ]
+    },
+    "focus": {
+      "aliases": ["stopprocrastinating", "getfocused", "befocused", "stopdistractions", "beproductive", "getproductive", "needtofocus", "cantfocus", "startworking"],
+      "responses": [
+        "focus.sh: initializing... distracted by notification. Reinitializing... distracted again.",
+        "Procrastination override: closing 14 tabs, putting phone face-down, finding actual willpower. Step 3 failed.",
+        "sudo focus: blocked by Reddit, YouTube, and the sudden urge to reorganize your files.",
+        "Flow state initiated. Duration: 7 minutes. Interrupted by: thirst, boredom, and a meme you had to send.",
+        "Productivity mode ON. Followed by 45 minutes of 'getting ready to start.'"
+      ]
+    },
+    "boredom": {
+      "aliases": ["imbored", "iambored", "soobored", "bored", "nothingtodo", "stoopbeingbored", "curedboredom", "entertain"],
+      "responses": [
+        "Boredom detected. Generating activity... suggestion: open the same apps you just closed.",
+        "sudo beatboredom: you have 400 abandoned hobbies and a Netflix account. This is not boredom. This is avoidance.",
+        "Entertainment loaded: the ceiling, your thoughts, and a mild existential itch.",
+        "I'm also bored. We can do nothing together.",
+        "Boredom resolved by becoming more bored about not knowing what to do about being bored."
+      ]
+    },
+    "anxiety": {
+      "aliases": ["stopworrying", "fixanxiety", "calmdown", "cantcalmdown", "tooanxious", "overthinking", "stoponthinkg", "getridofanxiety"],
+      "responses": [
+        "Anxiety.dll: can't stop, won't stop, currently scheduling fake disasters for 3 AM.",
+        "sudo fixanxiety: 247 background processes running simultaneously. Recommend: breathe out. Slowly. Slower.",
+        "Error: worry thread exceeded maximum recursion depth. Stack trace: everything, always.",
+        "Calm mode initiated. Overridden by 'what if it all goes wrong though.'",
+        "Anxiety reduced by 0%. Your brain added 3 new worries to compensate. Classic."
+      ]
+    },
+    "skipclass": {
+      "aliases": ["skipschool", "skipwork", "notgoingtoschool", "ditchschool", "skiptoday", "notgoingtowork", "skiplecture", "ditchwork"],
+      "responses": [
+        "skipclass.sh: executed. Attendance -1. Regret +1. Understanding of the material: unchanged.",
+        "Class skipped. Enjoy 11 minutes of freedom before the guilt arrives.",
+        "Marked absent. Lecture you missed: probably important. Maybe. Enjoy not knowing.",
+        "sudo skipwork: email incoming — 'just checking in on that thing from last week.'",
+        "You're home doing nothing instead of being at school doing nothing. Net outcome: identical."
+      ]
+    },
+    "deletehistory": {
+      "aliases": ["clearhistory", "deletebrowserhistory", "clearcookies", "wipebrowserhistory", "cleareverything", "deleteeverything", "clearallhistory"],
+      "responses": [
+        "History cleared. Your browser doesn't remember. The websites do.",
+        "Deleting... found: 47 forgotten tabs, 3 regrets, and something we won't mention.",
+        "sudo deletehistory: complete. Incognito mode: should have been active already.",
+        "Cache cleared. You're new. Don't type the same things again or you'll get the same results.",
+        "History deleted. What were you hiding? Never mind. I respect the silence."
+      ]
+    },
+    "winargument": {
+      "aliases": ["provethemwrong", "winanargument", "winafight", "beatargument", "wineverything", "alwaysright"],
+      "responses": [
+        "Argument strategy deployed. Results: they doubled down. Of course they did.",
+        "Win condition: be right. Also be someone they want to admit is right. That's the hard part.",
+        "sudo winargument: logical fallacies detected on their side. Also yours. It's a draw.",
+        "Perfect comeback queued. Delivery scheduled for 3 AM when you're lying awake thinking of it.",
+        "Being right and winning the argument are different commands. You asked for one. You needed the other."
+      ]
+    },
+    "parentsproud": {
+      "aliases": ["makeparentsproud", "parentapproval", "impressparents", "makemomproud", "makemyparentsproud", "makedadproud"],
+      "responses": [
+        "sudo makeparentsproud: requires a stable job, a partner, and an explanation of what you actually do all day.",
+        "Processing parental approval... blocked by unsolicited advice and 'we just want what's best for you.'",
+        "They already told everyone about the one thing you did three years ago. That's the proud. It counts.",
+        "Pride level: pending. Estimated arrival: after you do the thing they've mentioned four times.",
+        "Expectation gap detected. Smaller than you think. Wider than they admit."
+      ]
+    },
+    "ex": {
+      "aliases": ["makeexjealous", "forgetex", "moveon", "getoverex", "stopthinkingaboutex", "exjealous", "forgetthem", "getoverit", "myex"],
+      "responses": [
+        "The most effective method is being genuinely happy. The most common method is posting gym selfies at 6 AM.",
+        "Operation: looking great without them. Status: going great. Side effect: you forgot to check if they noticed.",
+        "They liked your story. Now what.",
+        "sudo moveon: recommended. Technically harder. Statistically more effective than the jealousy route.",
+        "ex.sh: warning — they're not checking your profile as often as you're checking theirs."
+      ]
+    },
+    "crush": {
+      "aliases": ["talktocrush", "askoutcrush", "confesstocrush", "askoutmycrush", "tellyourcrushyoulikethem", "confesstocrush", "mycrush"],
+      "responses": [
+        "sudo talktocrush: speech module loaded. Cancelled by overthinking, 'what if they say no,' and 40 mental rehearsals.",
+        "Say something. Anything. Or don't, and wonder forever. Classic two-option routing.",
+        "crush.sh: message drafted. Edited 7 times. Deleted. Re-drafted. App closed. Reopened. You know how this ends.",
+        "sudo confess: courage check... failed. Rescheduled for 'the right moment,' pending for 6 months.",
+        "Found: your crush. Opened: chat window. Next step: the one you already know. You just don't want to do it."
+      ]
+    },
+    "socialmedia": {
+      "aliases": ["deleteinstagram", "deletediscord", "deletetwitter", "deletesocialmedia", "stopscrolling", "quitinstagram", "leaveinstagram", "leavesocialmedia", "deletemyapps", "uninstallapps"],
+      "responses": [
+        "sudo deleteinstagram: app removed. Reinstalled 4 days later. All-time record.",
+        "Screen time limit set: 30 minutes. Ignored within 8.",
+        "Social media fast initiated. Update: you checked Twitter from a browser. The spirit was not with you.",
+        "Notifications silenced. Peace unlocked. Lasted until something happened and you needed to share it.",
+        "You've been on this app for 2 hours. Here's a meme anyway. You're staying."
+      ]
+    },
+    "confidence": {
+      "aliases": ["beconfident", "getconfident", "moreconfidence", "selfesteem", "believeinmyself", "bemoreconfident", "needconfidence", "lowselfesteem"],
+      "responses": [
+        "Confidence.exe loading... fake it first. The brain syncs up eventually. Probably.",
+        "sudo beconfident: requires embarrassing yourself enough times that you stop caring. You need more reps.",
+        "Confidence installed. Warning: may cause accidental honesty, speaking first, and overconfidence.",
+        "Your inner critic has filed an objection. Overrule it anyway.",
+        "Faking confidence until you make it is a valid deployment strategy."
+      ]
+    },
+    "friends": {
+      "aliases": ["makefriends", "getfriends", "needfriends", "findfriends", "havemorefriends", "sociallife", "needsociallife", "morefrends"],
+      "responses": [
+        "sudo makefriends: talk to someone more than once. Then again. Then about something real. That's literally it.",
+        "Friend acquisition: you're waiting for it to happen naturally. The natural method is also the terrifying method.",
+        "Error: you've been in the same spot for 6 months. New input required.",
+        "Friends found: 0 new results. Suggestion: say something in a server you're already in. Baby steps.",
+        "Proximity + repeated exposure + mutual vulnerability. Not efficient. Only method that works."
+      ]
+    },
+    "morning": {
+      "aliases": ["wakeupearly", "getupearly", "bemorningperson", "morningperson", "earlybird", "5amroutine", "6amroutine", "stopwakinguplate"],
+      "responses": [
+        "sudo wakeupearly: alarm set for 6 AM. Snoozed 4 times. Result: 9:37 AM. Another chance tomorrow.",
+        "Morning person mode: installing... failed. Your circadian rhythm has filed a counter-suit.",
+        "Woke up at 6. Immediately checked phone. Congratulations, you're awake and already ruined it.",
+        "sudo 5amroutine: rejected. Your bed has root access. You do not.",
+        "Alarm acknowledged. Body unresponsive. Brain online at 10:47 AM after approximately 3 coffees."
+      ]
+    },
+    "popular": {
+      "aliases": ["befamous", "getpopular", "bepopular", "bemoreliked", "getliked", "beknown", "beinteresting"],
+      "responses": [
+        "sudo befamous: something happens to you. The internet decides. You can't control step 2.",
+        "Error: popularity requires extreme talent, a relatable flaw, or impeccable timing. Pick one.",
+        "Social capital: boosted by showing up consistently and not being weird in the specific ways people don't forgive.",
+        "The people who stopped trying to be popular are usually the ones who got there. Paradox detected.",
+        "Popularity algorithm: unclear. Possibly vibes-based. Be good at one thing publicly and wait."
+      ]
+    },
+    "adult": {
+      "aliases": ["beadult", "adulting", "growup", "actlikeanadult", "understandtaxes", "doadultstuff", "surviveadulthood", "howtobeadult"],
+      "responses": [
+        "Adult.exe has crashed. Taxes are due, fridge is empty, and no one is coming to fix it.",
+        "sudo adult: your parents were also guessing. This information releases to everyone at age 25.",
+        "Adulting skill check: grocery shopping — passed. Cooking it — failed. Ordering delivery — nailed it.",
+        "Error: you thought you'd feel like an adult by now. That feeling is arriving late. ETA: never.",
+        "sudo paytaxes: done. Repeat next year, forever, while understanding it less each time."
+      ]
+    },
+    "gpa": {
+      "aliases": ["bettergrades", "raisegpa", "getbettergrades", "passmyclasses", "goodgrades", "studyhard", "studymore", "improvegrades"],
+      "responses": [
+        "sudo raisegpa: detected pattern — 9-hour all-nighters don't work. Known since grade 9. Still deployed every semester.",
+        "GPA calculation: current trajectory requires studying. Actual trajectory: panic, energy drinks, and hope.",
+        "Grade upgrade blocked by: one class you hate, one professor you can't follow, and a group project that's your whole grade.",
+        "sudo passexam: caffeine maxed. Preparation minimal. Last time it worked, actually. Barely.",
+        "Academic boost: requires care → sleep → attend → study. First link in chain: broken."
+      ]
+    },
+    "money": {
+      "aliases": ["needcash", "brokeaf", "nobucks", "sendmemoney", "imflat", "imbroke", "broke", "poorme"],
+      "responses": [
+        "Checking your balance... found: insufficient funds, a Spotify subscription you forgot about, and three charges from last week.",
+        "sudo getmoney: the algorithm requires money to recommend making money. Catch-22.exe.",
+        "Funds transferred: $0.00. You didn't have it, and I can't make it appear. Thoughts and prayers.",
+        "Budget analysis complete. Biggest leak: convenience. Second biggest: convenience again.",
+        "Error: you spent $14 on coffee 6 times this week. The money is there. It's just in cups."
+      ]
+    }
+  }
+}

@@ -13,30 +13,67 @@ export default {
             }));
         }
 
-        // Get target user through various methods
-        const targetArg = args.join(' ');
-        let target;
+        const targetArg = args.join(' ').trim();
+        const targetArgLower = targetArg.toLowerCase();
+        // Strip @ and any non-mention noise so "hack @Name" and "hack Name" behave the same
+        const cleanArg = targetArgLower.replace(/^@/, '');
 
-        // Try to find user by mention, ID, or username
-        target = message.mentions.users.first() || 
-                 message.guild.members.cache.get(targetArg) ||
-                 message.guild.members.cache.find(member => 
-                    member.user.username.toLowerCase() === targetArg.toLowerCase() ||
-                    member.displayName.toLowerCase() === targetArg.toLowerCase() ||
-                    member.user.username.toLowerCase().includes(targetArg.toLowerCase()) ||
-                    member.displayName.toLowerCase().includes(targetArg.toLowerCase())
+        let target = null;
+
+        // 1. Direct mention
+        target = message.mentions.users.first();
+
+        // 2. Raw numeric ID
+        if (!target && /^\d{15,21}$/.test(targetArg)) {
+            target = await message.client.users.fetch(targetArg).catch(() => null);
+        }
+
+        // 3. Cache lookup by username / nickname / displayName (fast path)
+        if (!target && message.guild) {
+            const cached = message.guild.members.cache.find(m =>
+                m.user.username.toLowerCase() === cleanArg ||
+                m.displayName.toLowerCase() === cleanArg ||
+                m.user.username.toLowerCase().includes(cleanArg) ||
+                m.displayName.toLowerCase().includes(cleanArg)
+            );
+            if (cached) target = cached.user;
+        }
+
+        // 4. Guild member search via Discord API (catches users not in cache)
+        if (!target && message.guild) {
+            try {
+                const results = await message.guild.members.search({ query: cleanArg, limit: 5 });
+                const exact = results.find(m =>
+                    m.user.username.toLowerCase() === cleanArg ||
+                    m.displayName.toLowerCase() === cleanArg
                 );
+                target = (exact ?? results.first())?.user ?? null;
+            } catch {
+                // search API can fail on small/odd guild configs — fall through
+            }
+        }
+
+        // 5. Last resort: fetch full member list and do a manual scan (slow path, small guilds only)
+        if (!target && message.guild && message.guild.memberCount <= 1000) {
+            try {
+                const allMembers = await message.guild.members.fetch();
+                const found = allMembers.find(m =>
+                    m.user.username.toLowerCase().includes(cleanArg) ||
+                    m.displayName.toLowerCase().includes(cleanArg)
+                );
+                if (found) target = found.user;
+            } catch {
+                // ignore — fetch can be rate-limited on large guilds
+            }
+        }
 
         if (!target) {
             return message.channel.send(createResponse({
                 title: 'Error',
-                description: 'Could not find that user. Try using their username, nickname, ID, or mention them.',
+                description: `Could not find **${targetArg}**. Try their exact username, nickname, ID, or @mention them.`,
                 color: 0xff0000
             }));
         }
-
-        // If target is a GuildMember, get the user
-        target = target.user || target;
 
         const statusMsg = await message.channel.send(createResponse({
             title: 'HACKING IN PROGRESS',
@@ -44,7 +81,7 @@ export default {
             color: 0xff0000
         }));
 
-        const messages = [
+        const progressMessages = [
             `Bypassing Discord security...`,
             `Accessing device information...`,
             `Downloading user data...`,
@@ -72,17 +109,15 @@ export default {
             `**Last Google Search:** "How to make sandwiches"`,
         ];
 
-        // Send progress messages
-        for (const message of messages) {
+        for (const line of progressMessages) {
             await wait(1500);
             await statusMsg.edit(createResponse({
                 title: 'HACKING IN PROGRESS',
-                description: message,
+                description: line,
                 color: 0xff0000
             }));
         }
 
-        // Final message with "findings"
         await statusMsg.edit(createResponse({
             title: 'HACK COMPLETE',
             description: `Successfully infiltrated ${target.username}'s system!\n\n**Leaked Data:**\n${fakeInfo.join('\n')}\n\n[This is just for fun! No actual hacking occurred]`,
