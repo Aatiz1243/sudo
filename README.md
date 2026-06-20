@@ -58,7 +58,7 @@ Commands live in [`data/commands.json`](./data/commands.json). Each entry looks 
 - **`aliases`** are alternate phrasings that route to the same command. Spaces and punctuation are stripped automatically when matching, so `"i need a gf"` and `"ineedagf"` are equivalent — you only need to list one form.
 - **`responses`** are the possible replies; one is picked at random each time.
 
-To add or change a command, open a PR editing `data/commands.json`. Guidelines:
+To add or change a command, open a PR editing `data/commands.json`. Note: contributing a PR doesn't grant you any rights beyond what [`LICENSE`](./LICENSE) already gives everyone — merging is at the maintainer's discretion. Guidelines:
 - Keep it relatable to everyday, non-technical situations (homework, sleep, social stuff) — not Linux jargon.
 - Funny over edgy. Light roasting is fine; nothing targeted or mean-spirited.
 - 3–5 response variants per command, so it doesn't repeat too fast.
@@ -79,4 +79,4 @@ If you maintain a running instance with `OWNER_ID` set, you can also add command
 
 ## License
 
-MIT
+Custom — see [`LICENSE`](./LICENSE). Short version: read it, fork it, modify it, run it privately, contribute back — but you need the Owner's written permission before publicly hosting, redistributing, or monetizing a version of it. This is **not** an OSI-approved open source license.

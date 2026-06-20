@@ -1,0 +1,74 @@
+Sudo Project License v1.0
+Copyright (c) 2026 Aatiz
+
+This license governs use of the Sudo source code ("the Software"), available
+at https://github.com/Aatiz1243/sudo.
+
+1. OWNERSHIP
+
+   All rights, title, and copyright in the Software are retained by Aatiz
+   ("the Owner"). This license grants certain permissions below; it does not
+   transfer ownership of the Software to anyone else.
+
+2. PERMITTED USE
+
+   You may, without asking first:
+
+   a. View, download, clone, and study the source code.
+
+   b. Modify the source code for your own personal use.
+
+   c. Run a private instance of the Software (modified or unmodified) on
+      Discord server(s) that you own or moderate, provided the bot is not
+      advertised, publicly listed, or made available for other people to add
+      to their own servers.
+
+   d. Submit contributions (bug fixes, new commands, improvements) back to
+      the official repository via pull request. Accepting or merging any
+      contribution is at the sole discretion of the Owner, and does not
+      grant the contributor any rights beyond what this license already
+      grants everyone.
+
+3. RESTRICTED USE — REQUIRES WRITTEN PERMISSION FROM THE OWNER
+
+   You may NOT do any of the following without prior written permission:
+
+   a. Publicly distribute, rehost, sublicense, or republish the Software or
+      any derivative of it — including publishing your own fork as a public
+      repository intended for others to deploy.
+
+   b. Operate, advertise, or list a publicly-joinable instance of the
+      Software or a derivative of it (for example: a bot other people can
+      invite to their own Discord servers, or a listing on a bot directory).
+
+   c. Use the Software, in whole or in part, for any commercial purpose —
+      including charging for access, soliciting donations tied to a hosted
+      instance, or running ads alongside it.
+
+   d. Remove or alter this license, copyright notices, or attribution to the
+      Owner in any copy or derivative of the Software.
+
+   e. Represent a modified or forked version of the Software as the official
+      Sudo project, or use the name "Sudo" or the Owner's name to imply
+      endorsement of your fork.
+
+4. REQUESTING PERMISSION
+
+   To request permission for anything in Section 3, open an issue on the
+   GitHub repository at https://github.com/Aatiz1243/sudo/issues or contact
+   the Owner directly. Permission, if granted, will be given in writing and
+   may include specific conditions.
+
+5. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE OWNER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING
+   FROM USE OF THE SOFTWARE.
+
+6. TERMINATION
+
+   Any use outside the permissions in Section 2, undertaken without
+   permission obtained under Section 4, automatically terminates your rights
+   under this license with respect to that use.
