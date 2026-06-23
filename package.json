@@ -9,7 +9,7 @@
     "dev": "nodemon index.js"
   },
   "author": "Aatiz",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "AGPL-3.0",
   "dependencies": {
     "discord.js": "^14.23.2",
     "dotenv": "^16.6.1"
