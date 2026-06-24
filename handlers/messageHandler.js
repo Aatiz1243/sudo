@@ -3,6 +3,7 @@ import { routeCommand, addCommand } from './commandRouter.js';
 import { checkSignal, handleSignal } from './moderationHandler.js';
 import { logUnknownCommand } from './unknownLogger.js';
 import { recordUse, getUserRank } from './rankSystem.js';
+import { generateResponse } from './responseGenerator.js';
 
 const PREFIX   = '$sudo';
 const OWNER_ID = process.env.OWNER_ID ?? null;
@@ -22,11 +23,8 @@ function fallback(commandText) {
 }
 
 // ── Response picker (rank-aware) ──────────────────────────────────────────────
-function pickResponse(responses, rankInfo) {
-  if (!responses?.length) return 'Error: no responses configured for this command.';
-
-  const idx  = Math.floor(Math.random() * responses.length);
-  const base = responses[idx];
+function pickResponse(cmd, cmdName, userId, rankInfo) {
+  const base = generateResponse(cmd, cmdName, userId);
 
   // Root / God tiers get an occasional label — keeps it visible but rare
   if (rankInfo.rankIndex >= 4 && Math.random() < 0.12) return `[GOD MODE] ${base}`;
@@ -157,7 +155,7 @@ export function registerMessageHandler(client) {
         // JS commands (e.g. hack) handle their own reply
         await route.cmd.execute(message, route.args, { rankInfo });
       } else {
-        await safeReply(message, pickResponse(route.cmd.responses, rankInfo));
+        await safeReply(message, pickResponse(route.cmd, route.cmdName, message.author.id, rankInfo));
       }
 
       // Rank-up DM

@@ -157,14 +157,30 @@ export function routeCommand(commandText) {
 
 // ── Approve flow: add command to JSON pool without restart ────────────────────
 export async function addCommand(canonicalName, responses, aliases = []) {
-  const key = normalize(canonicalName);
-  commandPool[key] = { aliases: aliases.map(normalize), responses };
+  const key        = normalize(canonicalName);
+  const newAliases = aliases.map(normalize);
+
+  const raw  = readFileSync(COMMANDS_PATH, 'utf8');
+  const data = JSON.parse(raw);
+
+  const existing = data.commands[key];
+
+  if (existing) {
+    // Merge into the existing command instead of overwriting it — preserves
+    // fragments/templates and existing aliases. This is what makes the
+    // generated-response promotion loop ($sudo X generates a great line ->
+    // !approve X | that line) safe to use on commands that already exist.
+    existing.responses = [...new Set([...(existing.responses ?? []), ...responses])];
+    existing.aliases    = [...new Set([...(existing.aliases ?? []), ...newAliases])];
+  } else {
+    data.commands[key] = { aliases: newAliases, responses };
+  }
+
+  await writeFile(COMMANDS_PATH, JSON.stringify(data, null, 2), 'utf8');
+
+  commandPool = data.commands;
   rebuildLookup();
 
-  const raw = readFileSync(COMMANDS_PATH, 'utf8');
-  const data = JSON.parse(raw);
-  data.commands[key] = { aliases: aliases.map(normalize), responses };
-  await writeFile(COMMANDS_PATH, JSON.stringify(data, null, 2), 'utf8');
   return key;
 }
 

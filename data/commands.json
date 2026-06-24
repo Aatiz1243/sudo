@@ -239,6 +239,261 @@
         "Budget analysis complete. Biggest leak: convenience. Second biggest: convenience again.",
         "Error: you spent $14 on coffee 6 times this week. The money is there. It's just in cups."
       ]
+    },
+    "exam": {
+      "aliases": ["cramexam", "studyforexam", "examtomorrow", "finalsweek", "cramming", "passmyfinals", "finals", "studyallnight"],
+      "responses": [
+        "sudo cram: initiated at 11pm for a 9am exam. Optimal scheduling confirmed.",
+        "Knowledge transfer in progress... 4% complete... 6 hours remaining... good luck.",
+        "Exam.exe: you are now Googling things you should have learned three weeks ago."
+      ],
+      "fragments": {
+        "prefix": ["sudo cram --exam", "Initiating finals.sh", "Knowledge upload"],
+        "detail": ["12 hours before the exam", "on energy drink number 4", "rereading the same paragraph for the 6th time", "watching a 40-minute review video at 2x speed"],
+        "outcome": ["status: still not done", "confidence: fabricated", "ETA: never, but the exam is in 7 hours", "result: somehow passed anyway, mechanism unknown"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Cause: {detail}."
+      ]
+    },
+    "job": {
+      "aliases": ["getajob", "findajob", "needajob", "jobhunting", "jobsearch", "applyforjobs", "getemployed", "needemployment"],
+      "responses": [
+        "sudo job-search: 47 applications sent. Responses: 1, and it was a rejection template.",
+        "Resume.pdf optimized. Still requires 5 years experience for an entry-level role. Math unclear.",
+        "Job acquired: 0. LinkedIn notifications about people 'open to work': 9,000."
+      ],
+      "fragments": {
+        "prefix": ["sudo applyforjob", "job-hunt.sh", "Career protocol"],
+        "detail": ["requires 5 years experience for an entry-level posting", "ghosted after 3 interview rounds", "rejected by an algorithm before a human saw it", "asked to do unpaid 'trial work' first"],
+        "outcome": ["morale: declining", "LinkedIn premium subscription: regretted", "status: still applying", "cover letter count: incalculable"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Latest blocker: {detail}."
+      ]
+    },
+    "gym": {
+      "aliases": ["gogym", "gymmotivation", "hitthegym", "workoutmotivation", "skipgym", "legday", "gainsmotivation"],
+      "responses": [
+        "Gym membership: active. Gym attendance: theoretical.",
+        "sudo lift: cancelled. Couch has stronger gravitational pull today.",
+        "Leg day initiated. Outcome: unable to walk normally for 3 days. Worth it? Unconfirmed."
+      ],
+      "fragments": {
+        "prefix": ["sudo gym --start", "Workout.sh", "Gains protocol"],
+        "detail": ["overridden by the couch", "delayed by 'one more episode'", "blocked by sore legs from last time", "rescheduled to Monday, permanently"],
+        "outcome": ["motivation: theoretical", "gains: pending since March", "membership: a monthly donation to the building", "status: will go tomorrow, for real"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Reason: {detail}."
+      ]
+    },
+    "wifi": {
+      "aliases": ["fixwifi", "wifidown", "badwifi", "fixmyinternet", "internetlag", "wifisucks", "slowwifi", "internetdown"],
+      "responses": [
+        "sudo fixwifi: router unplugged and replugged. Problem persists. Confidence in solution: 0%.",
+        "Connection status: technically online, functionally useless.",
+        "Ping: 9000ms. Enemy team: already won. Router: blinking innocently."
+      ],
+      "fragments": {
+        "prefix": ["sudo wifi --restart", "Network diagnostic", "Connection.sh"],
+        "detail": ["spiked to 9000ms mid-game", "dropped during the one important call", "buffered at the exact wrong moment", "worked fine until you needed it"],
+        "outcome": ["router status: judged harshly", "fix: unplug and pray", "result: still broken, differently", "blame: assigned to the ISP, correctly"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Trigger: {detail}."
+      ]
+    },
+    "battery": {
+      "aliases": ["lowbattery", "phonedying", "chargemyphone", "batteryanxiety", "phonebatterylow", "needcharger"],
+      "responses": [
+        "Battery: 3%. Charger: in the other room. Risk tolerance: tested.",
+        "sudo charge: cable found, but it's the slow one. ETA to 100%: geological.",
+        "Low power mode engaged. Screen brightness: a war crime. Survival mode: active."
+      ],
+      "fragments": {
+        "prefix": ["sudo battery --check", "Power diagnostic", "Charge.sh"],
+        "detail": ["died during the important text", "hit 1% at the worst possible moment", "drained by one app left open", "the charger cable is somehow always missing"],
+        "outcome": ["status: anxiety inducing", "result: portable charger forgotten, again", "fix: hunting for an outlet like it's a sport", "battery health: also questionable"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Cause: {detail}."
+      ]
+    },
+    "leftonread": {
+      "aliases": ["leftonseen", "ignoredmytext", "doubletexting", "gotleftonread", "noreplyback", "theydidntreply", "seenbutnoreply"],
+      "responses": [
+        "Message status: Seen. Reply status: indefinitely pending.",
+        "sudo followup: sent a second text. Strategic value: questionable. Sent anyway.",
+        "Read receipt: on. Reply: nowhere to be found. Confidence: shaken."
+      ],
+      "fragments": {
+        "prefix": ["sudo checktext", "Reply tracker", "Message.sh"],
+        "detail": ["seen 4 hours ago, no reply", "double-texted against your own advice", "left on read after a perfectly normal message", "typing bubble appeared and then vanished"],
+        "outcome": ["status: overthinking initiated", "anxiety: fully loaded", "result: re-reading your own message for hidden meaning", "conclusion: they're probably just busy, probably"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Evidence: {detail}."
+      ]
+    },
+    "groupproject": {
+      "aliases": ["groupprojectproblems", "freeloaderteam", "doitmyselfgroupproject", "teammatedidnothing", "carryingtheteam"],
+      "responses": [
+        "sudo groupproject: 4 members. 1 doing the work. Math checks out, sadly.",
+        "Teammate status: 'I'll do my part tonight.' Tonight: was 3 days ago.",
+        "Final submission: built solo at 2am. Group grade: shared equally anyway."
+      ],
+      "fragments": {
+        "prefix": ["sudo teamcheck", "Group diagnostic", "Project.sh"],
+        "detail": ["one member never responded in the chat", "the slides were 'almost done' a week ago", "someone added one bullet point and disappeared", "the group chat has been silent except from you"],
+        "outcome": ["workload distribution: unequal", "status: carrying it solo, again", "credit: shared, effort: not", "result: done anyway, resentment: noted"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Evidence: {detail}."
+      ]
+    },
+    "monday": {
+      "aliases": ["mondayblues", "hatemondays", "mondaymood", "mondaymotivation", "sundaynightdread", "backtowork"],
+      "responses": [
+        "sudo monday: system reluctantly rebooting after 2 days offline.",
+        "Weekend.exe has stopped responding. Monday.exe has taken over, uninvited.",
+        "Sunday night dread: fully loaded by 8pm. Monday hasn't even started yet."
+      ],
+      "fragments": {
+        "prefix": ["sudo monday --boot", "Weekday.sh", "Reboot sequence"],
+        "detail": ["alarm went off and was personally offended", "weekend ended without permission", "inbox refilled overnight, somehow", "motivation last seen Friday at 5pm"],
+        "outcome": ["status: running on fumes", "mood: hostile but functional", "energy: borrowed from next weekend", "result: surviving, technically"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Cause: {detail}."
+      ]
+    },
+    "existential": {
+      "aliases": ["existentialcrisis", "3amthoughts", "whatsthepointoflife", "deepthoughts", "midnightspiral", "existentialdread", "lifequestions"],
+      "responses": [
+        "sudo ponder: query 'what is the point of any of this' returned no results. Querying again at 3am tomorrow.",
+        "Existential.exe running in background. CPU usage: 100%. Productivity: 0%.",
+        "3am thought process: fully operational. Daytime version of you: would not approve."
+      ],
+      "fragments": {
+        "prefix": ["sudo existential --query", "Midnight thread", "Deep thought process"],
+        "detail": ["started from a random memory from 2014", "triggered by staring at the ceiling", "began as 'I should sleep' and spiraled", "no clear cause identified, as usual"],
+        "outcome": ["resolution: none, see you tomorrow at the same time", "status: spiraling productively", "conclusion: deferred to future self", "result: still awake, no closer to an answer"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Trigger: {detail}."
+      ]
+    },
+    "fomo": {
+      "aliases": ["fearofmissingout", "missingout", "everyonesthereexceptme", "didntgetinvited", "missedtheevent", "leftoutagain"],
+      "responses": [
+        "sudo checkstory: everyone's at the thing. You found out via a story. Cool.",
+        "FOMO.exe: triggered by a group photo you weren't in.",
+        "Invite status: not received. Vibes: currently low."
+      ],
+      "fragments": {
+        "prefix": ["sudo fomo --check", "Social radar", "Invite tracker"],
+        "detail": ["saw the group photo before getting the explanation", "found out from someone else's story", "the group chat planned it without you noticing", "everyone's reacting to an inside joke you missed"],
+        "outcome": ["status: mildly spiraling", "result: liking the photo anyway, pretending it's fine", "conclusion: there's probably a next time", "mood: quietly affected, loudly fine"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Trigger: {detail}."
+      ]
+    },
+    "late": {
+      "aliases": ["runninglate", "alwayslate", "latetoeverything", "gottagonow", "lateagain", "missedthebus", "missedmytrain"],
+      "responses": [
+        "sudo eta: original estimate 5 minutes. Actual: 25. Excuse: traffic, allegedly.",
+        "Running late.exe launched. Walking speed: aggressive. Outcome: still late.",
+        "Bus departed exactly as you reached the stop. Timing: impressively bad."
+      ],
+      "fragments": {
+        "prefix": ["sudo eta --recalculate", "Punctuality check", "Departure.sh"],
+        "detail": ["left 10 minutes later than planned, again", "missed the bus by exactly one minute", "got stuck behind every red light in town", "couldn't find your keys for 8 critical minutes"],
+        "outcome": ["status: speedwalking like it's a sport", "result: arrived fashionably/unforgivably late", "excuse: prepared, partially believable", "ETA: a polite lie"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Cause: {detail}."
+      ]
+    },
+    "lostitem": {
+      "aliases": ["losemystuff", "lostmykeys", "lostmywallet", "lostmyphone", "cantfindmyphone", "wheresmywallet", "lostmycharger"],
+      "responses": [
+        "sudo locate --keys: search exhausted. Found instead: 3 receipts and a missing AirPod.",
+        "Phone search initiated. Phone used to search for phone: missing. Irony noted.",
+        "Wallet last seen: yesterday, somewhere. Confidence in finding it: declining."
+      ],
+      "fragments": {
+        "prefix": ["sudo locate", "Lost-item scan", "Search protocol"],
+        "detail": ["checked every pocket twice, found nothing", "retraced the entire day mentally, no luck", "it's definitely in the last place you'd expect", "probably under something, theory unconfirmed"],
+        "outcome": ["status: still missing", "result: found something else instead, not helpful", "panic level: rising steadily", "conclusion: it'll turn up in 3 days, somehow"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Last known status: {detail}."
+      ]
+    },
+    "autocorrect": {
+      "aliases": ["autocorrectfail", "typofail", "sentthewrongtext", "embarrassingtypo", "autocorrectruinedmylife", "textfail"],
+      "responses": [
+        "sudo send: autocorrect changed one word. Message now means something very different. Sent anyway.",
+        "Typo detected after sending, not before. Timing: perfect, in the worst way.",
+        "Autocorrect.exe: 'fixed' a perfectly correct word into something inexplicable."
+      ],
+      "fragments": {
+        "prefix": ["sudo autocorrect --report", "Typo diagnostic", "Send.sh"],
+        "detail": ["changed a normal word into something unrelated", "fixed something that wasn't broken", "added an apostrophe that changed everything", "capitalized the one word that shouldn't be"],
+        "outcome": ["status: message already seen, no taking it back", "damage: mild to severe, depending on context", "result: 'lol typo' sent as damage control", "conclusion: autocorrect owes you nothing, clearly"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Cause: {detail}."
+      ]
+    },
+    "zoomfail": {
+      "aliases": ["zoommistake", "mutefail", "leftmicon", "forgottomute", "embarrassingcall", "videocallfail", "joinedwrongcall"],
+      "responses": [
+        "sudo mute: command issued 4 minutes after it was needed.",
+        "Camera status: on. Awareness of camera being on: delayed by several critical seconds.",
+        "Joined the call. Wrong call. Realized after introducing yourself."
+      ],
+      "fragments": {
+        "prefix": ["sudo callcheck", "Video call diagnostic", "Mute.sh"],
+        "detail": ["mic stayed on through something it shouldn't have", "camera turned on mid-snack", "joined 10 minutes late and pretended otherwise", "froze on an unfortunate facial expression"],
+        "outcome": ["status: noticed too late", "damage: socially significant", "result: laughed it off, internally screaming", "conclusion: cameras off for the rest of the year"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Cause: {detail}."
+      ]
+    },
+    "cringe": {
+      "aliases": ["oldpostscringe", "pastselfcringe", "deletemyoldposts", "cringeattachment", "embarrassingpast", "oldtweetscringe"],
+      "responses": [
+        "sudo scroll --2016: found old posts. Regret levels: critical.",
+        "Past self detected. Object permanence regretted. Delete button: heavily used.",
+        "Old profile picture located. Personality at the time: a lot. Currently: deeply sorry."
+      ],
+      "fragments": {
+        "prefix": ["sudo archive --scan", "Old-post recovery", "Cringe.sh"],
+        "detail": ["found a post from 2016 that should stay buried", "rediscovered an old bio that aged poorly", "stumbled on a comment that didn't need to exist", "found a screenshot of an old conversation"],
+        "outcome": ["status: physically recoiled", "result: deleted on sight, no further questions", "reaction: a quiet scream, internally", "conclusion: growth is real, evidence is embarrassing"]
+      },
+      "templates": [
+        "{prefix}: {detail} — {outcome}.",
+        "{prefix} — {outcome}. Discovery: {detail}."
+      ]
     }
   }
 }

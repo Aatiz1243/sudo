@@ -2,6 +2,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import { surfaceTopGenerated } from './responseGenerator.js';
 
 const __dirname    = path.dirname(fileURLToPath(import.meta.url));
 const LOG_PATH     = path.join(__dirname, '../data/unknown-commands.json');
@@ -78,6 +79,7 @@ export function startWeeklyTimer(client) {
     const { lastSurfacedAt } = load();
     if (postedThisWeek(lastSurfacedAt)) return;
     await surfaceWeeklyUnknowns(client);
+    await surfaceTopGenerated(client, LOG_CHANNEL);
   }, 60 * 60 * 1000);
 
   console.log('[unknownLogger] weekly timer started');
