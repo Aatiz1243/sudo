@@ -3,8 +3,9 @@ import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const SIGNALS_PATH = path.join(__dirname, '../data/harm-signals.json');
+const __dirname          = path.dirname(fileURLToPath(import.meta.url));
+const SIGNALS_PATH       = path.join(__dirname, '../data/harm-signals.json');
+const HATE_PATTERNS_PATH = path.join(__dirname, '../data/hate-patterns.local.json');
 
 let harmPatterns = [];
 let hatePatterns = [];
@@ -17,13 +18,24 @@ function normalize(text) {
 export function loadSignals() {
   try {
     const data   = JSON.parse(readFileSync(SIGNALS_PATH, 'utf8'));
-    harmPatterns = (data.patterns     ?? []).map(normalize);
-    hatePatterns = (data.hatePatterns ?? []).map(normalize);
+    harmPatterns = (data.patterns ?? []).map(normalize);
     dmMessage    = data.dmMessage ?? '';
-    console.log(`[moderation] loaded ${harmPatterns.length} harm patterns, ${hatePatterns.length} hate patterns`);
   } catch (err) {
-    console.error('[moderation] failed to load signals:', err.message);
+    console.error('[moderation] failed to load harm-signals.json:', err.message);
   }
+
+  // Hate-pattern matching is intentionally NOT shipped with a built-in word
+  // list, and that list is never committed to this public repo. See the
+  // README "Moderation" section for why, and for the recommended primary
+  // tool (Discord's own AutoMod). This file is local-only and optional.
+  try {
+    const hateData = JSON.parse(readFileSync(HATE_PATTERNS_PATH, 'utf8'));
+    hatePatterns   = (hateData.hatePatterns ?? []).map(normalize);
+  } catch {
+    hatePatterns = []; // expected for anyone who hasn't created this file locally
+  }
+
+  console.log(`[moderation] loaded ${harmPatterns.length} harm pattern(s), ${hatePatterns.length} hate pattern(s)`);
 }
 
 /**
